@@ -3,7 +3,7 @@
     <head>
 
         <title>Meu Projeto Final!</title>
-
+      
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,10 +177,10 @@
                 <div style="max-width: 900px;" class="center">
         
                     <form method="post">
-                        <input type="text" placeholder="Seu nome..."/>
-                        <input type="email" placeholder="Seu e-mail..."/>
+                        <input  type="text" id="name" placeholder="Seu nome..."/>
+                        <input id="verificar" type="email" placeholder="Seu e-mail..."/>
                         <textarea placeholder="Sua mensagem..."></textarea>
-                        <input type="submit" nome="acao" value="Enviar"/>
+                        <input type="submit" value="Enviar" id = "send"/>
 
                     </form>
                 </div>
@@ -240,6 +240,25 @@
                 }
                 
             });
+        </script>
+
+        <script>
+
+           
+            const btn = document.querySelector("#send");
+        btn.addEventListener("click",function(e) {
+
+    e.preventDefault();
+
+    const name = document.querySelector("#name");
+
+    const value = name.value;
+    
+    console.log(value);
+
+    alert(`Olá ${value}, foi realizado o seu envio.` )
+
+});
         </script>
         
         </body>
